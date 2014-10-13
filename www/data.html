@@ -18,8 +18,8 @@
      KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
--->
-<html>
+  -->
+  <html>
   <head>
     <meta charset="utf-8" />
     <meta name="format-detection" content="telephone=no" />
@@ -38,125 +38,130 @@
     <script src="js/angular.js"></script>
     <script src="js/onsenui.js"></script>
     <script>
-      ons.bootstrap();
+    ons.bootstrap();
     </script>
     <title>My Data</title>
   </head>
-<body>
-  <div class="navigation-bar">
-    <div class="navigation-bar__center">My Data</div>
-  </div>
+  <body>
 
-  <h2 class="text-center">3Days<br>
-    <div>
-      <canvas id="3days" height="250" width="250"></canvas>
+    <ons-page class="ons">
+    <ons-toolbar>
+      <div class="center">My Data</div>
+    </ons-toolbar>
+
+    <div class="container">
+      <h2 class="text-center">3Days<br>
+        <div>
+          <canvas id="3days" height="250" width="250"></canvas>
+        </div>
+        <script>
+        var doughnutData = [
+        {
+          value: 70,
+          color:"#ee7835",
+          label: "ポジ"
+        },
+        {
+          value: 30,
+          color: "#94c9d0",
+          label: "ネガ"
+        }
+        ];
+
+        var options = {
+          percentageInnerCutout : 60
+        };
+
+        var myDoughnut = new Chart(document.getElementById("3days").getContext("2d")).Doughnut(doughnutData, options);
+        </script>
+      </h2>
+
+      <h2 class="text-center">1Week<br>
+        <div>
+          <canvas id="1week" height="250" width="250"></canvas>
+        </div>
+        <script>
+        var doughnutData = [
+        {
+          value: 70,
+          color:"#ee7835",
+          label: "ポジ"
+        },
+        {
+          value: 30,
+          color: "#94c9d0",
+          label: "ネガ"
+        }
+        ];
+
+        var options = {
+          percentageInnerCutout : 60
+        };
+
+        var myDoughnut = new Chart(document.getElementById("1week").getContext("2d")).Doughnut(doughnutData, options);
+        </script>
+      </h2>
+
+      <h2 class="text-center">2Weeks<br>
+        <div>
+          <canvas id="2weeks" height="250" width="250"></canvas>
+        </div>
+        <script>
+        var doughnutData = [
+        {
+          value: 70,
+          color:"#ee7835",
+          label: "ポジ"
+        },
+        {
+          value: 30,
+          color: "#94c9d0",
+          label: "ネガ"
+        }
+        ];
+
+        var options = {
+          percentageInnerCutout : 60
+        };
+
+        var myDoughnut = new Chart(document.getElementById("2weeks").getContext("2d")).Doughnut(doughnutData, options);
+        </script>
+      </h2>
+
+      <h2 class="text-center">Compare with the world<br>
+        <div>
+          <canvas id="world" height="250" width="250"></canvas>
+        </div>
+        <script>
+        var doughnutData = [
+        {
+          value: 70,
+          color:"#ee7835",
+          label: "ポジ"
+        },
+        {
+          value: 30,
+          color: "#94c9d0",
+          label: "ネガ"
+        }
+        ];
+
+        var options = {
+          percentageInnerCutout : 60
+        };
+
+        var myDoughnut = new Chart(document.getElementById("world").getContext("2d")).Doughnut(doughnutData, options);
+        </script>
+      </h2>
+
+      <div class="login-form">
+        <a href="followers.html">
+          <ons-button modifier="large" class="login-button"><i class="fa fa-male"></i> followers</ons-button>
+          <!-- fontawesomeのNew Icons in 4.2が表示されない -->
+        </a>
+      </div>
     </div>
-    <script>
-      var doughnutData = [
-            {
-              value: 70,
-              color:"#ee7835",
-              label: "ポジ"
-            },
-            {
-              value: 30,
-              color: "#94c9d0",
-              label: "ネガ"
-            }
-      ];
+    </ons-page>
 
-      var options = {
-        percentageInnerCutout : 60
-      };
-
-      var myDoughnut = new Chart(document.getElementById("3days").getContext("2d")).Doughnut(doughnutData, options);
-    </script>
-  </h2>
-
-  <h2 class="text-center">1Week<br>
-    <div>
-      <canvas id="1week" height="250" width="250"></canvas>
-    </div>
-    <script>
-      var doughnutData = [
-            {
-              value: 70,
-              color:"#ee7835",
-              label: "ポジ"
-            },
-            {
-              value: 30,
-              color: "#94c9d0",
-              label: "ネガ"
-            }
-      ];
-
-      var options = {
-        percentageInnerCutout : 60
-      };
-
-      var myDoughnut = new Chart(document.getElementById("1week").getContext("2d")).Doughnut(doughnutData, options);
-    </script>
-  </h2>
-
-  <h2 class="text-center">2Weeks<br>
-    <div>
-      <canvas id="2weeks" height="250" width="250"></canvas>
-    </div>
-    <script>
-      var doughnutData = [
-            {
-              value: 70,
-              color:"#ee7835",
-              label: "ポジ"
-            },
-            {
-              value: 30,
-              color: "#94c9d0",
-              label: "ネガ"
-            }
-      ];
-
-      var options = {
-        percentageInnerCutout : 60
-      };
-
-      var myDoughnut = new Chart(document.getElementById("2weeks").getContext("2d")).Doughnut(doughnutData, options);
-    </script>
-  </h2>
-
-  <h2 class="text-center">Compare with the world<br>
-    <div>
-      <canvas id="world" height="250" width="250"></canvas>
-    </div>
-    <script>
-      var doughnutData = [
-            {
-              value: 70,
-              color:"#ee7835",
-              label: "ポジ"
-            },
-            {
-              value: 30,
-              color: "#94c9d0",
-              label: "ネガ"
-            }
-      ];
-
-      var options = {
-        percentageInnerCutout : 60
-      };
-
-      var myDoughnut = new Chart(document.getElementById("world").getContext("2d")).Doughnut(doughnutData, options);
-    </script>
-  </h2>
-
-  <div class="login-form">
-    <a href="followers.html">
-      <ons-button modifier="large" class="login-button"><i class="fa fa-male"></i> followers</ons-button>
-    <!-- fontawesomeのNew Icons in 4.2が表示されない -->
-    </a>
-  </div>
-
-</body>
-</html>
+  </body>
+  </html>

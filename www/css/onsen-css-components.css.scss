@@ -59,7 +59,7 @@ h6 {
   bottom: 0px;
   overflow: visible;
   font-size: 17px;
-  color: #1f1f21;
+  color: #999999;
 }
 .page::-webkit-scrollbar {
   display: none;
@@ -381,7 +381,7 @@ h6 {
   user-select: none;
   z-index: 2;
   display: block;
-  height: 44px;
+  height: 60px;
   padding-left: 0;
   padding-right: 0;
   background: #f8f8f8;
@@ -431,7 +431,7 @@ h6 {
   background: #94c9d0;
   border: none;
   line-height: normal;
-  height: 44px;
+  height: 60px;
   vertical-align: top;
   overflow: visible;
   display: block;
@@ -456,10 +456,10 @@ h6 {
   font-weight: 500;
 }
 .navigation-bar__title {
-  line-height: 44px;
-  font-size: 17px;
+  line-height: 60px;
+  font-size: 30px;
   font-weight: 500;
-  color: #1f1f21;
+  color: #ffffff;
   margin: 0;
   padding: 0;
   overflow: visible;
