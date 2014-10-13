@@ -7,6 +7,7 @@ body {
 }
 
 .navigation-bar {
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 
@@ -14,17 +15,24 @@ body {
   text-align: center;
 }
 
-p {
-  color: #999999;
-}
-
 .ma {
   color: #ee7835;
+}
+
+.container {
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+p {
+  color: #999999;
 }
 
 a {
 text-decoration: none;
 }
+
 // 背景色       #94c9d0
 // ボタン色     #ee7835
 // 文字色       #999999
