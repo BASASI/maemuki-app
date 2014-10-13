@@ -34,6 +34,7 @@
     <link rel="stylesheet" href="css/data.css.scss">
     <link rel="stylesheet" href="css/style.css.scss" />
 
+    <script src="js/Chart.js"></script>
     <script src="js/angular.js"></script>
     <script src="js/onsenui.js"></script>
     <script>
@@ -45,21 +46,116 @@
   <div class="navigation-bar">
     <div class="navigation-bar__center">My Data</div>
   </div>
+
   <h2 class="text-center">3Days<br>
-    <img src="img/circle_chart.png" alt="円グラフ">
+    <div>
+      <canvas id="3days" height="250" width="250"></canvas>
+    </div>
+    <script>
+      var doughnutData = [
+            {
+              value: 70,
+              color:"#ee7835",
+              label: "ポジ"
+            },
+            {
+              value: 30,
+              color: "#94c9d0",
+              label: "ネガ"
+            }
+      ];
+
+      var options = {
+        percentageInnerCutout : 60
+      };
+
+      var myDoughnut = new Chart(document.getElementById("3days").getContext("2d")).Doughnut(doughnutData, options);
+    </script>
   </h2>
-  <h2 class="text-center">1Weeks<br>
-    <img src="img/circle_chart.png" alt="円グラフ">
+
+  <h2 class="text-center">1Week<br>
+    <div>
+      <canvas id="1week" height="250" width="250"></canvas>
+    </div>
+    <script>
+      var doughnutData = [
+            {
+              value: 70,
+              color:"#ee7835",
+              label: "ポジ"
+            },
+            {
+              value: 30,
+              color: "#94c9d0",
+              label: "ネガ"
+            }
+      ];
+
+      var options = {
+        percentageInnerCutout : 60
+      };
+
+      var myDoughnut = new Chart(document.getElementById("1week").getContext("2d")).Doughnut(doughnutData, options);
+    </script>
   </h2>
+
   <h2 class="text-center">2Weeks<br>
-    <img src="img/circle_chart.png" alt="円グラフ">
+    <div>
+      <canvas id="2weeks" height="250" width="250"></canvas>
+    </div>
+    <script>
+      var doughnutData = [
+            {
+              value: 70,
+              color:"#ee7835",
+              label: "ポジ"
+            },
+            {
+              value: 30,
+              color: "#94c9d0",
+              label: "ネガ"
+            }
+      ];
+
+      var options = {
+        percentageInnerCutout : 60
+      };
+
+      var myDoughnut = new Chart(document.getElementById("2weeks").getContext("2d")).Doughnut(doughnutData, options);
+    </script>
   </h2>
+
   <h2 class="text-center">Compare with the world<br>
-    <img src="img/circle_chart.png" alt="円グラフ">
+    <div>
+      <canvas id="world" height="250" width="250"></canvas>
+    </div>
+    <script>
+      var doughnutData = [
+            {
+              value: 70,
+              color:"#ee7835",
+              label: "ポジ"
+            },
+            {
+              value: 30,
+              color: "#94c9d0",
+              label: "ネガ"
+            }
+      ];
+
+      var options = {
+        percentageInnerCutout : 60
+      };
+
+      var myDoughnut = new Chart(document.getElementById("world").getContext("2d")).Doughnut(doughnutData, options);
+    </script>
   </h2>
+
   <div class="login-form">
-    <ons-button modifier="large" class="login-button"><i class="fa fa-male"></i> followers</ons-button>
+    <a href="followers.html">
+      <ons-button modifier="large" class="login-button"><i class="fa fa-male"></i> followers</ons-button>
     <!-- fontawesomeのNew Icons in 4.2が表示されない -->
+    </a>
   </div>
 
 </body>
